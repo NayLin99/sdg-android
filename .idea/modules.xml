@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SDG.iml" filepath="$PROJECT_DIR$/SDG.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdg-android.iml" filepath="$PROJECT_DIR$/sdg-android.iml" />
     </modules>
   </component>
 </project>
