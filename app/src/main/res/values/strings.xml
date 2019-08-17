@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SDG</string>
+    <string name="lbl_save">Save</string>
 </resources>
