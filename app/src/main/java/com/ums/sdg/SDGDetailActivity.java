@@ -19,6 +19,9 @@ public class SDGDetailActivity extends AppCompatActivity {
     private WebView tvGoal;
     private WebView tvLink;
     private ImageView iv;
+    private TextView tvLblFacts;
+    private TextView tvLblTargets;
+    private TextView tvLblLinks;
     public static Intent newIntent(Context context, int pos) {
         Intent i = new Intent(context, SDGDetailActivity.class);
         i.putExtra("POSITION", pos);
@@ -35,6 +38,9 @@ public class SDGDetailActivity extends AppCompatActivity {
         tvGoal = findViewById(R.id.tvGoal);
         tvLink = findViewById(R.id.tvLink);
         iv = findViewById(R.id.ivTitle);
+        tvLblFacts = findViewById(R.id.tvLblFact);
+        tvLblTargets = findViewById(R.id.tvLblTargets);
+        tvLblLinks = findViewById(R.id.tvLblLinks);
 
 
         if (savedInstanceState == null) {
@@ -54,6 +60,9 @@ public class SDGDetailActivity extends AppCompatActivity {
         tvGoal.loadData(Util.loadData(this).get(position).getTarget(), "text/html; charset=UTF-8", null);
         tvLink.loadData(Util.loadData(this).get(position).getLinks(), "text/html; charset=UTF-8", null);
         iv.setImageDrawable(Util.loadData(this).get(position).getImage());
+        tvLblTargets.setTextColor(getResources().getIntArray(R.array.sdgcolors)[position]);
+        tvLblFacts.setTextColor(getResources().getIntArray(R.array.sdgcolors)[position]);
+        tvLblLinks.setTextColor(getResources().getIntArray(R.array.sdgcolors)[position]);
 
 
     }
